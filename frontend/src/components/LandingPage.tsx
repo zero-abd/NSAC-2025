@@ -26,12 +26,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToSimulator 
             >
               Launch Simulator
             </button>
-                        <button 
+
+            <a 
+              href="https://drive.google.com/your-link-here"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button"
-              onClick={onNavigateToSimulator}
             >
-              Launch Simulator
-            </button>
+              View Documentation
+            </a>
           </div>
         </div>
 
