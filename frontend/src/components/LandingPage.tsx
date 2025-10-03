@@ -25,12 +25,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               technical detail is available for review.
             </p>
             <button className="cta-button" onClick={onNavigateToSimulator}>
-              Launch Simulator
+              Web Simulation
             </button>
 
-            <button className="cta-button" onClick={onNavigateToSimulator}>
-              Launch Simulator Clone
-            </button>
+            <a
+              className="cta-button"
+              href="https://drive.google.com/file/d/10r6ZZLBjhTueOEDbC2zwob__QXsjxYLx/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Local Simulation (Preferred)
+            </a>
 
             <a
               href="https://drive.google.com/your-link-here"
