@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, '../frontend-dist'), {
   setHeaders: (res, filePath) => {
     // Ensure latest HTML on each deploy
     if (filePath.endsWith(`${path.sep}index.html`)) {
-      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Cache-Control', 'no-store');
       return;
     }
 
@@ -68,7 +68,7 @@ app.get('*', (req, res) => {
   if (req.path.startsWith('/api') || req.path.startsWith('/game')) {
     return res.status(404).json({ error: 'Not found' });
   }
-  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Cache-Control', 'no-store');
   res.sendFile(path.join(__dirname, '../frontend-dist/index.html'));
 });
 
