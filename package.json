@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Artemis+ Application - NASA Space Apps Challenge 2025",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm run build",
+    "build": "cd frontend && npm install --omit=dev && npm run build && cd ../backend && npm install --omit=dev && npm run build",
     "start": "cd backend && npm start",
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
     "install-all": "cd frontend && npm install && cd ../backend && npm install"
@@ -12,6 +12,6 @@
     "concurrently": "^8.2.2"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.19.0"
   }
 }

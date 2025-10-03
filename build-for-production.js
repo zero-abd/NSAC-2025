@@ -7,7 +7,7 @@ console.log('🚀 Building Artemis+ for production...\n');
 try {
   // 1. Build frontend
   console.log('📦 Building frontend...');
-  execSync('cd frontend && npm install && npm run build', { stdio: 'inherit' });
+  execSync('cd frontend && npm install --omit=dev && npm run build', { stdio: 'inherit' });
   
   // 2. Create frontend-dist directory in backend
   const frontendDistPath = path.join(__dirname, 'backend', 'frontend-dist');
@@ -22,7 +22,7 @@ try {
   
   // 4. Build backend
   console.log('🔧 Building backend...');
-  execSync('cd backend && npm install && npm run build', { stdio: 'inherit' });
+  execSync('cd backend && npm install --omit=dev && npm run build', { stdio: 'inherit' });
   
   console.log('\n✅ Build complete! Ready for deployment.');
   console.log('📁 Frontend files copied to: backend/frontend-dist/');
