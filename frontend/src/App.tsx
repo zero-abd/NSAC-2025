@@ -4,11 +4,9 @@ import { GamePanel } from './components/GamePanel';
 import { ChatPanel } from './components/ChatPanel';
 import { LandingPage } from './components/LandingPage';
 import { AboutPage } from './components/AboutPage';
-import { DesignPage } from './components/DesignPage';
 import { MissionPage } from './components/MissionPage';
 import { SystemsPage } from './components/SystemsPage';
 import { MethodsPage } from './components/MethodsPage';
-import { DataPage } from './components/DataPage';
 import './App.css';
 
 function App() {
@@ -43,20 +41,6 @@ function App() {
         return (
           <div className="page-with-chat">
             <MethodsPage />
-            <ChatPanel />
-          </div>
-        );
-      case 'data':
-        return (
-          <div className="page-with-chat">
-            <DataPage />
-            <ChatPanel />
-          </div>
-        );
-      case 'design':
-        return (
-          <div className="page-with-chat">
-            <DesignPage />
             <ChatPanel />
           </div>
         );

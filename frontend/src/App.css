@@ -156,6 +156,17 @@ body::before {
   font-weight: 600;
 }
 
+.nav-item.external-link {
+  text-decoration: none;
+  color: #b0bec5;
+}
+
+.nav-item.external-link:hover {
+  background-color: #2a3441;
+  color: #64b5f6;
+  border-color: #64b5f6;
+}
+
 /* Game panel styles */
 .game-panel {
   flex: 1;
@@ -645,6 +656,14 @@ body::before {
   margin-right: auto;
 }
 
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .cta-button {
   background: transparent;
   border: 2px solid #64b5f6;
@@ -657,6 +676,10 @@ body::before {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
 }
 
 .cta-button:hover {
@@ -859,6 +882,115 @@ body::before {
   border-left: 1px solid #2a2f3e;
 }
 
+/* AI Helper Button */
+.ai-helper-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(100, 181, 246, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-helper-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(100, 181, 246, 0.6);
+}
+
+/* Homepage Chat Overlay */
+.homepage-chat-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.homepage-chat-panel {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(100, 181, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(100, 181, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(100, 181, 246, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
+  border-radius: 20px;
+  border: 1px solid #64b5f6;
+  box-shadow: 0 20px 60px rgba(100, 181, 246, 0.3);
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.homepage-chat-panel .chat-header {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(26, 31, 46, 0.9);
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid #64b5f6;
+  backdrop-filter: blur(10px);
+}
+
+.close-chat-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #64b5f6;
+  font-size: 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-chat-button:hover {
+  background: rgba(100, 181, 246, 0.2);
+  color: #42a5f5;
+}
+
+.homepage-chat-panel .chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.homepage-chat-panel .chat-input-container {
+  padding: 20px;
+  border-top: 1px solid #64b5f6;
+  background-color: rgba(26, 31, 46, 0.9);
+  backdrop-filter: blur(10px);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .app {
@@ -889,6 +1021,16 @@ body::before {
   
   .hero-subtitle {
     font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    gap: 12px;
+  }
+  
+  .cta-button {
+    min-width: 180px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
   
   .pillars-container {
@@ -942,6 +1084,23 @@ body::before {
   .chat-panel {
     width: 100%;
     height: 300px;
+  }
+  
+  .ai-helper-button {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .homepage-chat-overlay {
+    padding: 10px;
+  }
+  
+  .homepage-chat-panel {
+    height: 90vh;
+    max-height: none;
   }
 }
 
