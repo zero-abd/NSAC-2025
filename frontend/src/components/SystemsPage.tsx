@@ -209,7 +209,7 @@ export const SystemsPage: React.FC = () => {
                                   <div className="object-item">
                                     {Object.entries(item).map(([prop, val]) => (
                                       <span key={prop} className="property">
-                                        <strong>{prop}:</strong> {val}
+                                        <strong>{prop}:</strong> {String(val)}
                                       </span>
                                     ))}
                                   </div>
@@ -223,7 +223,7 @@ export const SystemsPage: React.FC = () => {
                           <div className="detail-object">
                             {Object.entries(value).map(([prop, val]) => (
                               <div key={prop} className="object-property">
-                                <strong>{prop}:</strong> {val}
+                                <strong>{prop}:</strong> {String(val)}
                               </div>
                             ))}
                           </div>

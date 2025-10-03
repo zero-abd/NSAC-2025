@@ -153,7 +153,7 @@ export const MethodsPage: React.FC = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {section.content.parameters.map((param, index) => (
+                          {section.content.parameters?.map((param, index) => (
                             <tr key={index}>
                               <td>{param.param}</td>
                               <td>{param.value}</td>
@@ -165,7 +165,7 @@ export const MethodsPage: React.FC = () => {
                     </div>
                   ) : section.id === 'recycling-procedures' ? (
                     <div className="recycling-materials">
-                      {section.content.materials.map((material, index) => (
+                      {section.content.materials?.map((material, index) => (
                         <div key={index} className="material-card">
                           <h3>{material.type}</h3>
                           <div className="material-details">
@@ -193,7 +193,7 @@ export const MethodsPage: React.FC = () => {
                   ) : section.id === 'spares-maintenance' ? (
                     <div className="spares-list">
                       <ul>
-                        {section.content.spares.map((spare, index) => (
+                        {section.content.spares?.map((spare, index) => (
                           <li key={index}>{spare}</li>
                         ))}
                       </ul>
