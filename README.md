@@ -1,4 +1,4 @@
-# Artemis+ Application
+# Artemis+ Lunar Habitat Simulator
 
 **NASA Space Apps Challenge 2025**
 
