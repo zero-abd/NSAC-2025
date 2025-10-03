@@ -2,7 +2,7 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "npm run build"
+    "buildCommand": "node build-for-production.js"
   },
   "deploy": {
     "startCommand": "cd backend && npm start",
