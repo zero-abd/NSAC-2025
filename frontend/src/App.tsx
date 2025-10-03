@@ -5,6 +5,9 @@ import { ChatPanel } from './components/ChatPanel';
 import { LandingPage } from './components/LandingPage';
 import { AboutPage } from './components/AboutPage';
 import { DesignPage } from './components/DesignPage';
+import { MissionPage } from './components/MissionPage';
+import { SystemsPage } from './components/SystemsPage';
+import { MethodsPage } from './components/MethodsPage';
 import './App.css';
 
 function App() {
@@ -15,9 +18,40 @@ function App() {
       case 'home':
         return <LandingPage onNavigateToSimulator={() => setActiveTab('simulator')} />;
       case 'about':
-        return <AboutPage />;
+        return (
+          <div className="page-with-chat">
+            <AboutPage />
+            <ChatPanel />
+          </div>
+        );
+      case 'mission':
+        return (
+          <div className="page-with-chat">
+            <MissionPage />
+            <ChatPanel />
+          </div>
+        );
+      case 'systems':
+        return (
+          <div className="page-with-chat">
+            <SystemsPage />
+            <ChatPanel />
+          </div>
+        );
+      case 'methods':
+        return (
+          <div className="page-with-chat">
+            <MethodsPage />
+            <ChatPanel />
+          </div>
+        );
       case 'design':
-        return <DesignPage />;
+        return (
+          <div className="page-with-chat">
+            <DesignPage />
+            <ChatPanel />
+          </div>
+        );
       case 'simulator':
         return (
           <div className="simulator-container">

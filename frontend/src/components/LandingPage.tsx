@@ -12,16 +12,19 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToSimulator 
         <div className="hero-section">
           <div className="hero-content">
             <h1 className="hero-title">
-              Lunar Habitat — <span className="hero-accent">Artemis+</span>
+              <span className="hero-accent">Artemis+</span>
             </h1>
+            <p className="hero-subline">
+              Interactive lunar habitat planner for 16–32 crew using ISRU, vertical greenhouses, and closed-loop water systems.
+            </p>
             <p className="hero-subtitle">
-              Designing sustainable lunar habitats — greenhouses, ISRU, and closed-loop water systems.
+              Built from NASA mission reports and validated models — every technical detail is available for review.
             </p>
             <button 
               className="cta-button"
               onClick={onNavigateToSimulator}
             >
-              View Simulator
+              Launch Simulator
             </button>
           </div>
         </div>
