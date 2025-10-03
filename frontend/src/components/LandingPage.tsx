@@ -43,7 +43,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               rel="noopener noreferrer"
               className="cta-button"
             >
-              Summary, Data, Designs and Details
+             Data and Designs
             </a>
           </div>
         </div>
