@@ -42,8 +42,25 @@ app.get('/game', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// Serve frontend static files (for production)
-app.use(express.static(path.join(__dirname, '../frontend-dist')));
+// Serve frontend static files (for production) with cache control
+app.use(express.static(path.join(__dirname, '../frontend-dist'), {
+  setHeaders: (res, filePath) => {
+    // Ensure latest HTML on each deploy
+    if (filePath.endsWith(`${path.sep}index.html`)) {
+      res.setHeader('Cache-Control', 'no-cache');
+      return;
+    }
+
+    // Long cache for fingerprinted assets (vite outputs to assets/ with content hashes)
+    if (filePath.includes(`${path.sep}assets${path.sep}`)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      return;
+    }
+
+    // Reasonable default for other static files
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+  }
+}));
 
 // Serve frontend for all non-API routes (SPA routing)
 app.get('*', (req, res) => {
@@ -51,6 +68,7 @@ app.get('*', (req, res) => {
   if (req.path.startsWith('/api') || req.path.startsWith('/game')) {
     return res.status(404).json({ error: 'Not found' });
   }
+  res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, '../frontend-dist/index.html'));
 });
 

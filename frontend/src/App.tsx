@@ -8,6 +8,7 @@ import { DesignPage } from './components/DesignPage';
 import { MissionPage } from './components/MissionPage';
 import { SystemsPage } from './components/SystemsPage';
 import { MethodsPage } from './components/MethodsPage';
+import { DataPage } from './components/DataPage';
 import './App.css';
 
 function App() {
@@ -42,6 +43,13 @@ function App() {
         return (
           <div className="page-with-chat">
             <MethodsPage />
+            <ChatPanel />
+          </div>
+        );
+      case 'data':
+        return (
+          <div className="page-with-chat">
+            <DataPage />
             <ChatPanel />
           </div>
         );
