@@ -26,6 +26,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToSimulator 
             >
               Launch Simulator
             </button>
+                        <button 
+              className="cta-button"
+              onClick={onNavigateToSimulator}
+            >
+              Launch Simulator
+            </button>
           </div>
         </div>
 
