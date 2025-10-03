@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Artemis+</title>
+    <title>Unity WebGL Player | NASA Space App</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="0" style="width: 100%; height: 100vh; outline: none;"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Artemis+</div>
+        <div id="unity-build-title">NASA Space App</div>
       </div>
     </div>
     <script>
@@ -57,24 +57,33 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/artemis_v2.loader.js";
+      var loaderUrl = buildUrl + "/WebGLBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/artemis_v2.data.br",
-        frameworkUrl: buildUrl + "/artemis_v2.framework.js.br",
-        codeUrl: buildUrl + "/artemis_v2.wasm.br",
+        dataUrl: buildUrl + "/WebGLBuild.data.br",
+        frameworkUrl: buildUrl + "/WebGLBuild.framework.js.br",
+        codeUrl: buildUrl + "/WebGLBuild.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "Artemis+",
+        productName: "NASA Space App",
         productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
 
-      // By default Unity keeps WebGL canvas render target size matched with
+      // By default, Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
+
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -94,8 +103,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "100%";
-        canvas.style.height = "100vh";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
@@ -110,21 +119,6 @@
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-                
-                // Ensure canvas can receive focus and mouse events
-                canvas.addEventListener('click', () => {
-                  canvas.focus();
-                });
-                
-                // Enable pointer lock when canvas is clicked
-                canvas.addEventListener('click', () => {
-                  if (canvas.requestPointerLock) {
-                    canvas.requestPointerLock();
-                  }
-                });
-                
-                // Focus canvas on load
-                canvas.focus();
               }).catch((message) => {
                 alert(message);
               });

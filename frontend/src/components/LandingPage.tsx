@@ -38,12 +38,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             </a>
 
             <a
-              href="https://drive.google.com/your-link-here"
+              href="https://docs.google.com/document/d/1SzAdJUrG13BEjFGdndVeFb8ll743DiXvXLCdL5AuoD0/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button"
             >
-              View Documentation
+              Summary, Data, Designs and Details
             </a>
           </div>
         </div>
