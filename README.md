@@ -1,5 +1,7 @@
 # Artemis+ Lunar Habitat Simulator
 
+**🌐 Live Demo: [Artemis+](https://nsac-2025-production.up.railway.app/)**
+
 **NASA Space Apps Challenge 2025**
 
 A React TypeScript web application featuring an Artemis+ Unity WebGL game with an AI-powered chat assistant using Google's Gemini LLM. This project was developed for the NASA Space Apps Challenge 2025, combining space exploration gaming with AI assistance for educational and strategic purposes.
