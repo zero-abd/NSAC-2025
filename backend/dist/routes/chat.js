@@ -45,7 +45,7 @@ router.post('/message', async (req, res) => {
         const prompt = `You are a helpful Artemis+ mission assistant for a lunar base simulation game. The user is playing a space exploration game where they build and manage lunar habitats.
 
 GAME CONTROLS:
-- WASD keys for character movement
+- W, A, S, D keys for character movement
 - Left Alt to lock/unlock mouse cursor
 - When mouse is locked, move mouse to control character view/camera
 - Use these controls to navigate around the lunar base and inspect different areas

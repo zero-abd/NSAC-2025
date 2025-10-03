@@ -41,8 +41,19 @@ app.get('/api/health', (req, res) => {
 app.get('/game', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '../public/index.html'));
 });
+// Serve frontend static files (for production)
+app.use(express_1.default.static(path_1.default.join(__dirname, '../frontend-dist')));
+// Serve frontend for all non-API routes (SPA routing)
+app.get('*', (req, res) => {
+    // Don't serve frontend for API routes
+    if (req.path.startsWith('/api') || req.path.startsWith('/game')) {
+        return res.status(404).json({ error: 'Not found' });
+    }
+    res.sendFile(path_1.default.join(__dirname, '../frontend-dist/index.html'));
+});
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`WebGL game available at http://localhost:${PORT}/game`);
+    console.log(`Frontend available at http://localhost:${PORT}`);
 });
 //# sourceMappingURL=index.js.map
