@@ -1,0 +1,33 @@
+.key-parameters {
+  margin: 2rem 0;
+}
+
+.parameters-table {
+  overflow-x: auto;
+}
+
+.parameters-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.parameters-table th,
+.parameters-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.parameters-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.parameters-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.parameters-table tr:hover {
+  background-color: #f0f0f0;
+}

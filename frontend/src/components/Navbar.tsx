@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Info, Target, Settings, BookOpen, Gamepad2, Table } from 'lucide-react';
+import { Home, Info, Target, Settings, BookOpen, Gamepad2, PenTool, Database } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: string;
@@ -55,16 +55,22 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
           <span>Methods</span>
         </div>
         
-        <a
-          href="https://docs.google.com/document/d/1SzAdJUrG13BEjFGdndVeFb8ll743DiXvXLCdL5AuoD0/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-item external-link"
+        <div 
+          className={`nav-item ${activeTab === 'design' ? 'active' : ''}`}
+          onClick={() => onTabChange('design')}
         >
-          <Table size={20} />
-          <span>Data & Design</span>
-        </a>
-        
+          <PenTool size={20} />
+          <span>Design</span>
+        </div>
+
+        <div 
+          className={`nav-item ${activeTab === 'data' ? 'active' : ''}`}
+          onClick={() => onTabChange('data')}
+        >
+          <Database size={20} />
+          <span>Data</span>
+        </div>
+
         <div 
           className={`nav-item ${activeTab === 'simulator' ? 'active' : ''}`}
           onClick={() => onTabChange('simulator')}

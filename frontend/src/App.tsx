@@ -7,6 +7,8 @@ import { AboutPage } from './components/AboutPage';
 import { MissionPage } from './components/MissionPage';
 import { SystemsPage } from './components/SystemsPage';
 import { MethodsPage } from './components/MethodsPage';
+import { DesignPage } from './components/DesignPage';
+import { DataPage } from './components/DataPage';
 import './App.css';
 
 function App() {
@@ -51,6 +53,10 @@ function App() {
             <ChatPanel />
           </div>
         );
+      case 'design':
+        return <DesignPage />;
+      case 'data':
+        return <DataPage />;
       default:
         return <LandingPage onNavigateToSimulator={() => setActiveTab('simulator')} />;
     }
