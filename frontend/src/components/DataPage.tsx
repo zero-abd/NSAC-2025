@@ -125,6 +125,7 @@ export const DataPage: React.FC = () => {
             </div>
 
             <div className="reference-documents">
+              <h3><a href="https://docs.google.com/spreadsheets/d/1tDxuhRpVS8bi0BfDlGXndZ4CT7dj8DtnaLu8dr0sybU/edit?gid=227124781#gid=227124781">Review The Data By Clicking Here</a></h3>
               <h4>Used NASA Datasets & Resources</h4>
               <ul>
                 <li><a href="https://ntrs.nasa.gov/citations/20220014472" target="_blank" rel="noreferrer">Developing Bioregenerative Food Systems</a></li>
@@ -136,6 +137,7 @@ export const DataPage: React.FC = () => {
           </div>
 
           <div className="system-section power-energy">
+           
             <h3>Power Distribution & Energy Management</h3>
             <div className="system-description">
               <p>
@@ -146,6 +148,7 @@ export const DataPage: React.FC = () => {
             </div>
 
             <div className="subsystem-power-table">
+               <h3><a href="https://docs.google.com/spreadsheets/d/1h4BSEf-UlEZb1YzTFIdmd3EqQGs0afGdWCcpEqpM-wo/edit?usp=sharing">Review The Data By Clicking Here</a></h3>
               <h4>Subsystem Power Requirements</h4>
               <table className="power-table">
                 <thead>
@@ -213,6 +216,8 @@ export const DataPage: React.FC = () => {
             </div>
 
             <div className="reference-documents">
+              <h3><a href="https://docs.google.com/spreadsheets/d/1BsWM-NoRgPnxzoT1WH4UnigwunD2r0tQTyXfSfIH5DI/edit?usp=sharing">Review The Procedures By Clicking Here</a></h3>
+              <h3><a href="https://docs.google.com/spreadsheets/d/1N1t-ChSLXOGU_pa83VFh9FlWgZeSYSDVZwDZlaE3NZg/edit?usp=sharing">Review The Data By Clicking Here</a></h3>
               <h4>Used NASA Datasets & Resources</h4>
               <ul>
                 <li><a href="https://ntrs.nasa.gov/citations/20210010866" target="_blank" rel="noreferrer">ECLSS Test & Technology Reports</a></li>
@@ -239,6 +244,8 @@ export const DataPage: React.FC = () => {
             </div>
 
             <div className="reference-documents">
+               <h3><a href="https://docs.google.com/spreadsheets/d/1AhwtUctjUYt1rHwwD-zcdkD9ylVVK8XhWs1hc_6wGWw/edit?usp=sharing">Review The Procedures By Clicking Here</a></h3>
+              <h3><a href="https://docs.google.com/spreadsheets/d/1s7bQwlMGyn-vq7hTxUPfRXRTKNW5f-wBx_-b90FbxC0/edit?usp=sharing">Review The Habitat Equipment Data By Clicking Here</a></h3>
               <h4>Used NASA Datasets & Resources</h4>
               <ul>
                 <li><a href="https://data.nist.gov/od/id/mds2-3043" target="_blank" rel="noreferrer">3D Particle Shape & Size (Apollo + JSC‑1A)</a></li>
