@@ -63,6 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
           <span>Data & Design</span>
         </div>
         
+
         <div 
           className={`nav-item ${activeTab === 'simulator' ? 'active' : ''}`}
           onClick={() => onTabChange('simulator')}
