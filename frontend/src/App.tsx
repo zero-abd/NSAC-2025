@@ -7,12 +7,18 @@ import { AboutPage } from './components/AboutPage';
 import { MissionPage } from './components/MissionPage';
 import { SystemsPage } from './components/SystemsPage';
 import { MethodsPage } from './components/MethodsPage';
+import { DataDesignPage } from './components/DataDesignPage';
+import { X } from 'lucide-react';
 import './App.css';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
+  const [showChat, setShowChat] = useState(true);
 
   const renderContent = () => {
+    const isSimulator = activeTab === 'simulator';
+    const shouldShowChat = isSimulator || showChat;
+
     switch (activeTab) {
       case 'home':
         return <LandingPage onNavigateToSimulator={() => setActiveTab('simulator')} />;
@@ -20,28 +26,35 @@ function App() {
         return (
           <div className="page-with-chat">
             <AboutPage />
-            <ChatPanel />
+            {shouldShowChat && <ChatPanel />}
           </div>
         );
       case 'mission':
         return (
           <div className="page-with-chat">
             <MissionPage />
-            <ChatPanel />
+            {shouldShowChat && <ChatPanel />}
           </div>
         );
       case 'systems':
         return (
           <div className="page-with-chat">
             <SystemsPage />
-            <ChatPanel />
+            {shouldShowChat && <ChatPanel />}
           </div>
         );
       case 'methods':
         return (
           <div className="page-with-chat">
             <MethodsPage />
-            <ChatPanel />
+            {shouldShowChat && <ChatPanel />}
+          </div>
+        );
+      case 'data-design':
+        return (
+          <div className="page-with-chat">
+            <DataDesignPage />
+            {shouldShowChat && <ChatPanel />}
           </div>
         );
       case 'simulator':
@@ -61,6 +74,15 @@ function App() {
       <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="main-content">
         {renderContent()}
+        {activeTab !== 'simulator' && activeTab !== 'home' && (
+          <button 
+            className="chat-toggle"
+            onClick={() => setShowChat(!showChat)}
+            title={showChat ? "Hide AI Assistant" : "Show AI Assistant"}
+          >
+            {showChat ? <X size={20} /> : <span className="ai-text">AI</span>}
+          </button>
+        )}
       </div>
     </div>
   );

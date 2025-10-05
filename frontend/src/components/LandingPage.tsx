@@ -148,7 +148,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Local Simulation (Preferred)
+                Local Simulation
               </a>
 
               <a
