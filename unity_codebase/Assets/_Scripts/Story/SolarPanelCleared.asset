@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaf154525150a0419c2f92c2878e153, type: 3}
+  m_Name: SolarPanelCleared
+  m_EditorClassIdentifier: 
+  storyID: SolarPanelClearDone
+  lines:
+  - speakerName: Commandar
+    dialogue: Good job man!
+    portrait: {fileID: -660840104, guid: 73309c2c241ebf546b448f55b994b9dd, type: 3}
+  - speakerName: Engineer
+    dialogue: Thanks !
+    portrait: {fileID: 89795930, guid: 73309c2c241ebf546b448f55b994b9dd, type: 3}
+  - speakerName: Commandar
+    dialogue: GG
+    portrait: {fileID: -660840104, guid: 73309c2c241ebf546b448f55b994b9dd, type: 3}
