@@ -1,0 +1,4 @@
+unity_codebase
+**/node_modules
+**/dist
+.env*

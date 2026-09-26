@@ -21,4 +21,4 @@ These folders were committed with the Unity project, and it is not yet confirmed
 
 ## Removed from the repository
 
-Unity Asset Store packages used by the project are no longer committed. They must be bought or imported separately; see "Third-party assets (buy or import separately)" in [`README.md`](README.md). The compiled WebGL build in `backend/public/Build/` was produced with those packages installed.
+Unity Asset Store packages used by the project are no longer committed. They must be bought or imported separately; see "Third-party assets (buy or import separately)" in [`README.md`](README.md). The compiled WebGL build in `frontend/public/game/Build/` was produced with those packages installed.
