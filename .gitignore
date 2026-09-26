@@ -18,3 +18,8 @@ unity_codebase/Assets/Mini First Person Controller/
 unity_codebase/Assets/Mini First Person Controller.meta
 unity_codebase/Assets/YughuesFreeSandMaterials/
 unity_codebase/Assets/YughuesFreeSandMaterials.meta
+
+# build output and Vercel link
+dist
+.vercel
+.env*

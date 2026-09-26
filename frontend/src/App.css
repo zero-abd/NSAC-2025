@@ -477,6 +477,39 @@ body::before {
   cursor: not-allowed;
 }
 
+.byok-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #90a4ae;
+  margin-top: 10px;
+}
+
+.byok-note a {
+  color: #64b5f6;
+  word-break: break-word;
+}
+
+.byok-error {
+  font-size: 13px;
+  color: #ff8a80;
+  margin-bottom: 10px;
+}
+
+.forget-key-button {
+  margin-top: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #90a4ae;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forget-key-button:hover {
+  color: #64b5f6;
+}
+
 .send-button {
   position: absolute;
   right: 8px;

@@ -6,7 +6,7 @@ export const GamePanel: React.FC = () => {
       <div className="game-container">
         <iframe
           className="game-iframe"
-          src="/game"
+          src="/game/index.html"
           title="Artemis+ WebGL Game"
           allow="fullscreen; pointer-lock; gamepad; microphone; camera"
           allowFullScreen
