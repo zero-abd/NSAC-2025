@@ -896,6 +896,14 @@ body::before {
   background-color: #0a0e1a;
 }
 
+/* Give the simulation most of the width; the assistant stays alongside. */
+@media (min-width: 769px) {
+  .simulator-container .chat-panel {
+    width: 380px;
+    flex-shrink: 0;
+  }
+}
+
 /* Page with Chat Layout */
 .page-with-chat {
   display: flex;
